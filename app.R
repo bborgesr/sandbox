@@ -59,6 +59,7 @@ ui <- function(req) {
       })
     ),
     dashboardBody(
+      includeCSS("assets/style.css"),
       tabItems(
         tabItem("home", "Welcome home, Bárbara"),
         tabItem("ks_inbox", 
