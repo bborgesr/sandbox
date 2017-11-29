@@ -4,137 +4,55 @@ library(rvest)
 library(glue)
 library(shiny)
 library(shinydashboard)
+library(pool)
 
-read_asset_html <- function(name, what, ...) {
-  doc <- read_html(glue("assets/{name}.html"))
-  do.call(glue("html_{what}"), list(x = doc, header = TRUE))[[1]]
-}
+file_sources = paste0("modules/", list.files(path = "./modules", pattern = "*.R"))
+sapply(file_sources, source)
 
-ks <- list(
-  inbox = read_asset_html("ks_inbox", "table")
-)
-
-mental_models <- read_csv("assets/mental_models.csv") %>% 
-  select(-X1, -X5, -X6, -X7) %>%
-  rename(family = X2, model = `Mental Model`, description = Description)
-
-familify <- function(data, row, prev_family, isNamed) {
-  if (row == nrow(data)) return(data)
-  if (isNamed) {
-    family <- data[[row, "family"]]
-    familify(data, row + 1, family, FALSE)
-  } else {
-    data[[row, "family"]] <- prev_family
-    if (row <= nrow(data) - 1) {
-      nxt_family <- data[[row + 1, "family"]]
-      if (is.na(nxt_family)) familify(data, row + 1, prev_family, FALSE)
-      else familify(data, row + 1, NA, TRUE)
-    } else {
-      next
-    }
-  }
-}
-
-mental_models <- familify(mental_models, row = 1, prev_family = NA, isNamed = TRUE)
-
-ui <- function(req) {
-  dashboardPage(skin = "yellow",
-    dashboardHeader(title = "Bar Bar Bar"),
-    dashboardSidebar(
-      sidebarMenu(id = "tabs",
-        menuItem("Home", tabName = "home", icon = icon("home")),
-        menuItem("Reference", icon = icon("book"), startExpanded = TRUE,
-          menuSubItem("Keyboard shortcuts - Inbox", 
-            tabName = "ks_inbox", selected = TRUE),
-          menuSubItem("Faux Braiding videos", 
-            tabName = "faux_braids"),
-          menuSubItem("Mental models table", 
-            tabName = "mental_models"),
-          menuSubItem("parabens", tabName = "parabens")
-        )
-      ),
-      conditionalPanel("input.tabs == 'mental_models'", {
-        selectInput("family", "Filter by family", unique(mental_models$family), 
-          unique(mental_models$family), multiple = TRUE)
-      })
-    ),
-    dashboardBody(
-      includeCSS("assets/style.css"),
-      tabItems(
-        tabItem("home", "Welcome home, Bárbara"),
-        tabItem("ks_inbox", 
-          helpText("From Inbox, click `Shift ?` to access shortcuts cheatsheet"),
-          hr(),
-          checkboxGroupInput("where", "Filter by area", inline = TRUE,
-            unique(ks$inbox$where), selected = unique(ks$inbox$where)),
-          tableOutput("reference_table")
-        ),
-        tabItem("faux_braids", 
-          helpText("Faux braiding haristyles! Yay!"),
-          hr(),
-          tags$iframe(
-            src = "https://www.youtube.com/embed/tWKZ6wg_bcg",
-            frameborder = "0", allowfullscreen = NA, width = "560", height = "315"
-          ),
-          tags$iframe(
-            src = "https://www.youtube.com/embed/iZdNH12TWWs",
-            frameborder = "0", allowfullscreen = NA, width = "560", height = "315"
-          ),
-          tags$iframe(
-            src = "https://www.youtube.com/embed/QqJKL5Ey7K8",
-            frameborder = "0", allowfullscreen = NA, width = "560", height = "315"
-          )
-        ), tabItem("mental_models", 
-          helpText("Mental mondels datatable"),
-          DT::dataTableOutput("mental_models")
-        ),
-        tabItem("parabens", 
-          helpText("Para festas de aniversásrio"),
-          hr(),
-          p("Parabéns a você"),
-          p("Nesta data querida"),
-          p("Muitas felicidades"),
-          p("Muitos anos de vida"),
-          br(),
-          p("Hoje é dia de festa"),
-          p("Cantam as nossas almas"),
-          p("Para o(a) menino(a) ..."),
-          p("Uma salva de palmas!"),
-          br(),
-          p("Ele(a) hoje faz anos"),
-          p("Porque Deus assim quis"),
-          p("O que nós desejamos"),
-          p("É que seja feliz!"),
-          br(),
-          p("Tenha tudo de bom"),
-          p("Do que a vida contém"),
-          p("Tenha muita saúde"),
-          p("E amigos também")
-        )
+ui <- dashboardPage(skin = "yellow",
+  dashboardHeader(title = "Bar Bar Bar"),
+  dashboardSidebar(
+    sidebarMenu(id = "tabs",
+      menuItem("Home", tabName = "home", icon = icon("home")),
+      menuItem("TODO", tabName = "todo", icon = icon("list-ul")),
+      menuItem("Reading", tabName = "reading", icon = icon("book")),
+      menuItem("Work projects bucketlist", tabName = "rstudio", icon = icon("snowflake-o")),
+      menuItem("Reference", icon = icon("folder"), startExpanded = TRUE,
+        menuSubItem("Keyboard shortcuts - RStudio", tabName = "ks_rstudio", icon = icon("keyboard-o")),
+        menuSubItem("Keyboard shortcuts - Inbox", tabName = "ks_inbox", icon = icon("keyboard-o")),
+        menuSubItem("Faux Braiding videos", tabName = "braids", icon = icon("youtube")),
+        menuSubItem("Mental models table", tabName = "mental_models", icon = icon("database")),
+        menuSubItem("timevis demos", tabName = "timevis", icon = icon("code")),
+        menuSubItem("Parabéns", tabName = "parabens", icon = icon("glass"))
       )
+    ),
+    conditionalPanel("input.tabs == 'mental_models'", {
+      selectInput("family", "Filter by family", unique(mental_models$family), 
+        unique(mental_models$family), multiple = TRUE)
+    })
+  ),
+  dashboardBody(
+    includeCSS("assets/style.css"),
+    tabItems(
+      tabItem("home", homeModUI("home_module")),
+      tabItem("todo", todoModUI("todo_module")),
+      tabItem("reading", readingModUI("reading_module")),
+      tabItem("rstudio", rstudioModUI("rstudio_module")),
+      tabItem("ks_rstudio", keyboarShortcutsModUI("ks_rstudio_module", product = "rstudio", selected = "source")),
+      tabItem("ks_inbox", keyboarShortcutsModUI("ks_inbox_module", product = "inbox")),
+      tabItem("braids", braidsModUI("braids_module")),
+      tabItem("mental_models", helpText("Mental models datatable"), mentalModelsModUI("mental_models_module")),
+      tabItem("timevis", timevisModUI("timevis_modules")),
+      tabItem("parabens", parabensModUI("parabens_module"))
     )
   )
-}
+)
 
 server <- function(input, output, session) {
-  observe({
-    # Trigger this observer every time an input changes
-    reactiveValuesToList(input)
-    session$doBookmark()
-  })
-  onBookmarked(function(url) {
-    updateQueryString(url)
-  })
   
-  output$reference_table <- renderTable({
-    ks$inbox %>% 
-      filter(where %in% input$where) %>% 
-      select(description, key, where)
-  }, hover = TRUE, striped = TRUE, spacing = "xs")
-  
-  output$mental_models <- DT::renderDataTable({
-    mental_models %>% filter(family %in% input$family)
-  })
+  callModule(keyboarShortcutsMod, "ks_rstudio_module", product = "rstudio")
+  callModule(keyboarShortcutsMod, "ks_inbox_module", product = "inbox")
+  callModule(mentalModelsMod, "mental_models_module", fam = reactive(input$family))
 }
 
-shinyApp(ui, server, enableBookmarking = "url")
+shinyApp(ui, server)
