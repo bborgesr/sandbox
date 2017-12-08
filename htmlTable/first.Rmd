@@ -1,0 +1,169 @@
+---
+title: "rstudio::conf 2018 talks"
+resource_files:
+- .httr-oauth
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r setup, include=FALSE}
+library(googlesheets)
+library(dplyr)
+library(readr)
+library(here)
+library(magrittr)
+library(htmltools)
+library(shiny)
+
+if (!exists("ws")) {
+  gs_auth()
+  ws <- gs_key("10XT8v7xuYUYDBVUm2Te3N_aoNNywQhOZCPKs8rt4-rA")
+  program <- ws %>% gs_read("Program")
+  timetable <- ws %>% gs_read("Timetable")
+}
+
+sessions_for_day <- function(day) {
+  timetable %>%
+    filter(Day == day) %>%
+    select(Time, `Session Name`, `Session Time`, Parallel) %>%
+    arrange(Time)
+}
+
+tracks_for_session <- function(day, session) {
+  timetable %>%
+    filter(Day == day & Time == session) %>%
+    extract(c("Track 1", "Track 2", "Track 3")) %>%
+    t() %>%
+    as.vector()
+}
+
+talks_for_track <- function(day, session, track) {
+  program %>%
+    filter(Session == track) %>%
+    arrange(Order)
+}
+```
+
+```{r functions, include = FALSE}
+dayUI <- function(day, label) {
+  div(class = "day-container",
+    h3(class = "day", label),
+    plyr::alply(sessions_for_day(day), 1, sessionUI, day = day)
+  )
+}
+
+sessionUI <- function(day, session) {
+  tracks <- tracks_for_session(day, session$Time)
+  tagList(
+    div(class = "session-container desktop",
+      fluidRow(
+        column(3,
+          h4(class = "session",
+            session$`Session Name`,
+            tags$br(),
+            tags$small(session$`Session Time`)
+          )
+        ),
+        if (session$Parallel == "y") {
+          lapply(tracks, trackHeadingUI)
+        }
+      ),
+      lapply(1:4, function(slot) {
+        fluidRow(
+          column(3),
+          lapply(tracks, function(track) {
+            column(3,
+              program %>% filter(Session == track & Order == slot) %>% talkUI()
+            )
+          })
+        )
+      })
+    ),
+    div(class = "session-container mobile",
+      fluidRow(
+        column(3,
+          h4(class = "session", session$`Session Name`,
+            tags$small(session$`Session Time`)
+          )
+        ),
+        lapply(tracks, trackUI, day = day, session = session)
+      )
+    )
+  )
+}
+
+trackHeadingUI <- function(track) {
+  column(3,
+    h4(class = "track", if (is.na(track)) "" else track)
+  )
+}
+
+trackUI <- function(day, session, track) {
+  talks <- talks_for_track(day, session$Time, track)
+  column(3,
+    if (session$Parallel == "y") {
+      h4(class = "track", if (is.na(track)) "" else track)
+    },
+    div(class = "talks",
+      plyr::alply(talks, 1, talkUI)
+    )
+  )
+}
+
+newbieIcon <- icon("leaf", class = "newbie", lib = "glyphicon")
+
+talkUI <- function(df) {
+  if (nrow(df) == 0) {
+    return(NULL)
+  }
+  newbie <- if (df$`New user` == "y")
+    newbieIcon
+  else
+    NULL
+  
+  div(class = "talk",
+    if (is.na(df$Title))
+      div(class = "talk-title tbd", "TBD", newbie)
+    else
+      div(class = "talk-title", df$Title, newbie),
+    if (is.na(df$Name))
+      div(class = "presenter tbd", "TBD")
+    else
+      div(class = "presenter", df$Name)
+  )
+}
+```
+
+A `r newbieIcon` symbol means that the talk ought to be interesting to beginners.
+
+```{css echo=FALSE}
+body .main-container {
+  max-width: 100%;
+}
+.session-container { border-top: 0.5px solid #CCC; margin-bottom: 30px; }
+.day-container { margin-bottom: 60px; }
+.session, .track { color: #AAA; font-weight: normal; }
+.session { font-size: 36px; margin-bottom: -100px; }
+.session small { font-size: 18px; }
+.track { font-size: 24px; }
+.talk { margin: 12px 0; }
+.talk-title { font-weight: bold; }
+.tbd { color: red; font-weight: bold; }
+.newbie { color: #6A6; }
+/* .presenter { color: #656565; } */
+.mobile { display: none; }
+.desktop { display: block; }
+@media only screen and (max-width: 768px) {
+  .mobile { display: block; }
+  .desktop { display: none; }
+  .session { margin-bottom: inherit; }
+}    
+```
+
+```{r echo=FALSE}
+tagList(
+  dayUI(1, "Friday, February 2"),
+  dayUI(2, "Saturday, February 3")
+)
+```

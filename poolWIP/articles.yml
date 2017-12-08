@@ -1,0 +1,217 @@
+# Section: Start
+- section: Start
+  cssclass: start
+  description: This section covers the core of what you need to know to build and deploy your first Shiny app.
+  subsection-groups:
+  - title:
+    subsections:
+    - title: Your first Shiny app
+      name: first-app
+      description: We recommend that you start your Shiny journey with our beginner to intermediate <a href="/tutorial">tutorials</a>. Then, you can refresh what you learned in the tutorial and learn the lay of the land of Shiny starting with the articles in this section.
+      children:
+        - basics
+        - build
+        - running
+    - title: Help
+      name: help
+      description: Find out where to go for help and best practices for asking questions.
+      children:
+        - help
+# Section: Build
+- section: Build
+  cssclass: build
+  description: Now that you feel comfortable with making and deploying your first app, these articles can help you with more advanced Shiny functionality.
+  subsection-groups:
+  - title: Structure
+    subsections:
+    - title: Standalone apps
+      name: standalone-apps
+      description: Enhance your understanding of building individual apps.
+      children:
+        - app-formats
+        - two-file
+    - title: Interactive documents
+      name: interactive-docs
+      description: Embed your app in an interactive document.
+      children:
+        - rmarkdown
+        - interactive-docs
+        - rmd-integration
+        - rm-cheatsheet
+        - output-args
+        - generating-reports
+    #   - shiny-prerendered - needs to be written, stub in drafts folder
+    - title: Dashboards
+      name: dashboards
+      description: Build dashboards with predefined UI and layouts.
+      children:
+        - dashboards
+    - title: Gadgets
+      name: gadgets
+      description: Use Shiny to make your own interactive tools that streamline your data analysis workflow.
+      children:
+        - gadgets
+        - gadget-ui
+    #   - addin
+  - title: Backend
+    subsections:
+    - title: Reactivity
+      name: reactivity
+      description: Understand reactivity at a conceptual level to build apps that are more efficient, robust, and correct.
+      children:
+        - reactivity-overview
+        - isolation
+        - execution-scheduling
+        - understanding-reactivity
+    #   - reactiveval
+    #   - debounce-throttle
+    #   - freezereactiveval
+    #   - reactive-isolate
+        - client-data
+    - title: Data
+      name: data
+      description: Load data to and export data from your Shiny app, including relational databases.
+      children:
+        - databases
+        - pool-advanced
+        - persistent-data-storage
+  - title: Frontend
+    subsections:
+    - title: User interface
+      name: user-interface
+      description: Control the layout, user interface, and general appearance of your Shiny apps.
+      children:
+        - layout-guide
+        - display-modes
+        - tabsets
+        - html-tags
+        - html-ui
+        - dynamic-ui
+        - templates
+        - tag-glossary
+        - progress
+        - modal-dialogs
+        - notifications
+        - themes
+        - images         # outputs
+        - render-table   # outputs
+        - datatables     # outputs
+        - action-buttons # widgets
+        - sliders        # widgets
+        - download       # widgets
+        - selectize      # widgets
+    - title: Graphics & visualization
+      name: graphics
+      description: Create interactive plots with base and ggplot2 graphics (no JavaScript required!).
+      children:
+        - plot-interaction
+        - selecting-rows-of-data
+        - plot-interaction-advanced
+    - title: Shiny extensions
+      name: extensions
+      description: Learn about packages that provide advanced features that can enhance your Shiny apps.
+      children:
+        - htmlwidgets
+        - shinyjs
+        - js-build-widget
+        - js-widget-functionality
+        - js-send-message
+        - js-introjs
+        - js-custom-input
+        - js-dashboard
+    - title: Customizing Shiny
+      name: customize
+      description: Create custom Shiny widgets, layouts and outputs, or combine Shiny with other web technologies.
+      children:
+        - css
+        - building-inputs
+        - building-outputs
+        - google-analytics
+        - js-events
+# Section: Improve
+- section: Improve
+  cssclass: improve
+  description: This section covers aspects of improving your app, from modularization and testing to performance and tuning for scalability.
+  subsection-groups:
+  - title: Refactor
+    subsections:
+    - title: Code quality
+      name: code-quality
+      description: Find out about best practices for writing better Shiny code (that result in better and more performant Shiny apps) and for troubleshooting and debugging your apps.
+      children:
+    #   - troubleshooting - based on workshop materials
+        - debugging
+        - req
+        - scoping
+        - sanitize-errors
+        - validation
+        - unicode
+    - title: Testing
+      name: testing
+      description: Automatically check that your app continues to work as expected.
+      children:
+       - shinytest
+    - title: Modules
+      name: modules
+      description: Create reusable pieces of Shiny apps with modules and namespaces.
+      children:
+        - modules
+  - title: Scale
+    subsections:
+    - title: Measure usage
+      name: measure-usage
+      description: Understand the level of reach and usage of your apps.
+      children:
+        - usage-metrics
+        - google-analytics
+    - title: Performance
+      name: performance
+      description: Increase the performance of your apps.
+      children:
+       - performance
+    - title: Profiling
+      name: profiling
+      description: Understand how R spends its time in your app and use this information to enhance the performance of your app.
+      children:
+        - profiling
+    - title: Tuning
+      name: tuning
+      description: Tune the performance of your apps.
+      children:
+        - scaling-and-tuning
+        - scaling-and-tuning-ssp-rsc
+    #   - shinyloadtest?
+# Section: Share
+- section: Share
+  cssclass: share
+  description: This section covers your options for hosting and deploying your code, on-premises and on the cloud.
+  subsection-groups:
+  - title:
+    subsections:
+    - title: Deployment
+      name: deployment
+      description: Run your app on a server.
+      children:
+        - shinyapps
+        - shinyapps-auth
+        - custom-domains
+        - share-data
+        - migration
+        - shiny-server
+        - permissions  # shiny server pro
+        - libraries    # shiny server pro
+        - reconnecting
+        - admin-deployment
+    - title: Distribution
+      name: distribution
+      description: Share the code of your app with others.
+      children:
+        - deployment-local
+        - function
+    - title: Bookmarking
+      name: bookmarking
+      description: Bookmark the state of your application and get a URL which will restore the application with that state.
+      children:
+        - bookmarking-state
+        - advanced-bookmarking
+        - bookmarking-modules

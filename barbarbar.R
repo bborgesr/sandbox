@@ -1,3 +1,37 @@
+#  Links of interest:
+#  In addition to the ones saved to Inbox, in Evernote, etc, these should also be easily available/rememberable somewhere in here:
+#  (just hyperlink to everything!)
+#  
+#  MISC
+#    * https://github.com/bborgesr/sandbox   # overdue items (tabs explainer, pool updates for shiny website) and conf talk thinking
+#    * https://github.com/agrou/nutrient_pt  # look over Andreia's code and give her my thoughts
+#    * http://rmarkdown.rstudio.com/flexdashboard/using.html          #  need to read this
+#    * http://rmarkdown.rstudio.com/authoring_shiny_prerendered.html  #  need to read this
+#    * http://adventofcode.com/   # a series of small programming puzzles for a variety of skill levels. interesting?
+#    * https://support.rstudio.com/hc/en-us/articles/231874748-Scaling-and-Performance-Tuning-in-RStudio-Connect
+#    * https://github.com/rstudio/shiny/issues/1855#issuecomment-330928043
+#    * https://support.rstudio.com/hc/en-us/articles/200486138-Using-Different-Versions-of-R
+#    * https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Multiple-versions
+#    
+#  RSTUDIO::CONF
+#    * https://www.rstudio.com/conference/           # main website
+#    * https://beta.rstudioconnect.com/content/3105/ # schedule
+#    
+#  TIME MANAGEMENT
+#    * https://www.rescuetime.com/dashboard
+#    * https://achiever.rstudio.com/users/77
+#    * https://app.asana.com/-/login
+#    * https://www.etoro.com/portfolio
+#    * http://economist.com/
+#    
+#  COMM   
+#    * https://www.facebook.com/messages
+#    * https://hangouts.google.com/
+#    * https://web.whatsapp.com/
+#    
+#  VARIOUS GITHUB REPOS AND MY GIST ACCOUNT
+
+
 library(dplyr)
 library(readr)
 library(rvest)

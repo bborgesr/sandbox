@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>rstudio::conf 2018 talks</title>
+
+<script src="first_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="first_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="first_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="first_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="first_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="first_files/navigation-1.1/tabsets.js"></script>
+<link href="first_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="first_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">rstudio::conf 2018 talks</h1>
+
+</div>
+
+
+<p>A <i class="glyphicon glyphicon-leaf newbie"></i> symbol means that the talk ought to be interesting to beginners.</p>
+<style type="text/css">
+body .main-container {
+  max-width: 100%;
+}
+.session-container { border-top: 0.5px solid #CCC; margin-bottom: 30px; }
+.day-container { margin-bottom: 60px; }
+.session, .track { color: #AAA; font-weight: normal; }
+.session { font-size: 36px; margin-bottom: -100px; }
+.session small { font-size: 18px; }
+.track { font-size: 24px; }
+.talk { margin: 12px 0; }
+.talk-title { font-weight: bold; }
+.tbd { color: red; font-weight: bold; }
+.newbie { color: #6A6; }
+/* .presenter { color: #656565; } */
+.mobile { display: none; }
+.desktop { display: block; }
+@media only screen and (max-width: 768px) {
+  .mobile { display: block; }
+  .desktop { display: none; }
+  .session { margin-bottom: inherit; }
+}    
+</style>
+<div class="day-container">
+<h3 class="day">Friday, February 2</h3>
+<div class="session-container desktop">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Keynote
+<br/>
+<small>9:00a-10:30a</small>
+</h4>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+To the Tidyverse and Beyond: Challenges for the Future in Data Science
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Dianne Cook</div>
+</div>
+</div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+</div>
+<div class="session-container mobile">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Keynote
+<small>9:00a-10:30a</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+To the Tidyverse and Beyond: Challenges for the Future in Data Science
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Dianne Cook</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talks"></div>
+</div>
+<div class="col-sm-3">
+<div class="talks"></div>
+</div>
+</div>
+</div>
+<div class="session-container desktop">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Session 1
+<br/>
+<small>11:00a-12:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">tidy-1</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">shiny</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">IDE/rmarkdown</h4>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Tidy spatial data analysis
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Edzer Pebesma</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Scaling Shiny apps with async programming</div>
+<div class="presenter">Joe Cheng</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+RStudio 1.1 new features
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Kevin Ushey</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+The future of time series and financial analysis in the tidyverse
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Davis Vaughan</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Building dashboards with Shiny
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Barbara Borges Ribeiro</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">RStudio Server Pro 1.1 new features</div>
+<div class="presenter">Jonathan McPherson</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+infer: a package for tidy statistical inference
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Andrew Bray</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Make shiny fast by doing as little work as possible</div>
+<div class="presenter">Alan Dipert</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Learning R with rstudio.cloud
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Mel Gregory</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Tidying up your network analysis with tidygraph and ggraph
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Thomas Lin Pedersen</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Developing robust shiny apps with regression testing</div>
+<div class="presenter">Winston Chang</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Blogdown
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Yihui Xie</div>
+</div>
+</div>
+</div>
+</div>
+<div class="session-container mobile">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Session 1
+<small>11:00a-12:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">tidy-1</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+Tidy spatial data analysis
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Edzer Pebesma</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+The future of time series and financial analysis in the tidyverse
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Davis Vaughan</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+infer: a package for tidy statistical inference
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Andrew Bray</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Tidying up your network analysis with tidygraph and ggraph
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Thomas Lin Pedersen</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<h4 class="track">shiny</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">Scaling Shiny apps with async programming</div>
+<div class="presenter">Joe Cheng</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Building dashboards with Shiny
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Barbara Borges Ribeiro</div>
+</div>
+<div class="talk">
+<div class="talk-title">Make shiny fast by doing as little work as possible</div>
+<div class="presenter">Alan Dipert</div>
+</div>
+<div class="talk">
+<div class="talk-title">Developing robust shiny apps with regression testing</div>
+<div class="presenter">Winston Chang</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<h4 class="track">IDE/rmarkdown</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+RStudio 1.1 new features
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Kevin Ushey</div>
+</div>
+<div class="talk">
+<div class="talk-title">RStudio Server Pro 1.1 new features</div>
+<div class="presenter">Jonathan McPherson</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Learning R with rstudio.cloud
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Mel Gregory</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Blogdown
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Yihui Xie</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="session-container desktop">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Session 2
+<br/>
+<small>2:00p-3:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">tidy-2</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">case-study-1</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">rmarkdown</h4>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+The lesser known stars of the tidyverse
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Emily Robinson</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+The unreasonable effectiveness of empathy
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">JD Long</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+R Markdown: Eight ways
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Mine Cetinkaya-Rundel</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Creating interactive web graphics suitable for exploratory data analysis
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Carson Sievert</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Open-source solutions for medical marijuana
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Carl Ganz</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Adaptive feedback for learnr tutorials</div>
+<div class="presenter">Daniel Kaplan</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+tidycf: Turning analysis on its head by turning cashflows on their sides
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Emily Riederer</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title tbd">
+TBD
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Logan Meltabarger</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Beyond R: Using R Markdown with python, sql, bash, and more</div>
+<div class="presenter">Aaron Berg</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Modeling in the tidyverse
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Max Kuhn</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Phrasing: communicating data science through tweets, gifs, and classic misdirection
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Mara Averick</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Branding and automating your work with R Markdown
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Daniel Hadley</div>
+</div>
+</div>
+</div>
+</div>
+<div class="session-container mobile">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Session 2
+<small>2:00p-3:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">tidy-2</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+The lesser known stars of the tidyverse
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Emily Robinson</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Creating interactive web graphics suitable for exploratory data analysis
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Carson Sievert</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+tidycf: Turning analysis on its head by turning cashflows on their sides
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Emily Riederer</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Modeling in the tidyverse
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Max Kuhn</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<h4 class="track">case-study-1</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+The unreasonable effectiveness of empathy
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">JD Long</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Open-source solutions for medical marijuana
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Carl Ganz</div>
+</div>
+<div class="talk">
+<div class="talk-title tbd">
+TBD
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Logan Meltabarger</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Phrasing: communicating data science through tweets, gifs, and classic misdirection
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Mara Averick</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<h4 class="track">rmarkdown</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+R Markdown: Eight ways
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Mine Cetinkaya-Rundel</div>
+</div>
+<div class="talk">
+<div class="talk-title">Adaptive feedback for learnr tutorials</div>
+<div class="presenter">Daniel Kaplan</div>
+</div>
+<div class="talk">
+<div class="talk-title">Beyond R: Using R Markdown with python, sql, bash, and more</div>
+<div class="presenter">Aaron Berg</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Branding and automating your work with R Markdown
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Daniel Hadley</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="session-container desktop">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Session 3
+<br/>
+<small>4:00p-5:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">programming</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">case-study-2</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">production-1</h4>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Tidy eval: programming with dplyr, tidyr, and ggplot2</div>
+<div class="presenter">Hadley Wickham</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Rapid prototyping data products using Shiny
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Tanya Cashorali</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+R for Presidents
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Tareef Kawaf</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Data rectangling</div>
+<div class="presenter">Jenny Bryan</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Understanding PCA using Shiny and Stack Overflow data
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Julia Silge</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Connecting to open source databases</div>
+<div class="presenter">Kirill Müller</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">An assignment operator to unpack vectors and lists</div>
+<div class="presenter">Nathan Teetor</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Accelerating cancer research with R
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Sandra Griffith</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Best practices for working with databases
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Edgar Ruiz</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Debugging techniques in RStudio
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Amanda Gadrow</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Developing and deploying large scale shiny applications
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Herman Sontrop</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Deploying TensorFlow models</div>
+<div class="presenter">Javier Luraschi</div>
+</div>
+</div>
+</div>
+</div>
+<div class="session-container mobile">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Session 3
+<small>4:00p-5:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">programming</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">Tidy eval: programming with dplyr, tidyr, and ggplot2</div>
+<div class="presenter">Hadley Wickham</div>
+</div>
+<div class="talk">
+<div class="talk-title">Data rectangling</div>
+<div class="presenter">Jenny Bryan</div>
+</div>
+<div class="talk">
+<div class="talk-title">An assignment operator to unpack vectors and lists</div>
+<div class="presenter">Nathan Teetor</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Debugging techniques in RStudio
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Amanda Gadrow</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<h4 class="track">case-study-2</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+Rapid prototyping data products using Shiny
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Tanya Cashorali</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Understanding PCA using Shiny and Stack Overflow data
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Julia Silge</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Accelerating cancer research with R
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Sandra Griffith</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Developing and deploying large scale shiny applications
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Herman Sontrop</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<h4 class="track">production-1</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+R for Presidents
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Tareef Kawaf</div>
+</div>
+<div class="talk">
+<div class="talk-title">Connecting to open source databases</div>
+<div class="presenter">Kirill Müller</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Best practices for working with databases
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Edgar Ruiz</div>
+</div>
+<div class="talk">
+<div class="talk-title">Deploying TensorFlow models</div>
+<div class="presenter">Javier Luraschi</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="day-container">
+<h3 class="day">Saturday, February 3</h3>
+<div class="session-container desktop">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Keynote
+<br/>
+<small>9:00a-10:30a</small>
+</h4>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Machine Learning with R and TensorFlow
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">JJ Allaire</div>
+</div>
+</div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+</div>
+<div class="session-container mobile">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Keynote
+<small>9:00a-10:30a</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+Machine Learning with R and TensorFlow
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">JJ Allaire</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talks"></div>
+</div>
+<div class="col-sm-3">
+<div class="talks"></div>
+</div>
+</div>
+</div>
+<div class="session-container desktop">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Session 1
+<br/>
+<small>11:00a-12:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">packages</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">case-study-3</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">interop</h4>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Five packages in five weeks - from boredom to contribution via blogging
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Giora Simchoni</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Teach the Tidyverse to beginners
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">David Robinson</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Plumber: turning your R code into an API</div>
+<div class="presenter">Jeff Allen</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">You can make a package in 20 minutes</div>
+<div class="presenter">Jim Hester / Gabor Csardi</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+A SAS-to-R success story
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Elizabeth J. Atkinson</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">CloudML</div>
+<div class="presenter tbd">TBD</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+What makes a great R package?
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Joseph Rickert</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+How I Learned to Stop Worrying and Love the Firewall
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Ian Lyttle</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Building Spark ML pipelines with sparklyr</div>
+<div class="presenter">Kevin Kuo</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Contributing to tidyverse packages</div>
+<div class="presenter">Mara Averick</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Achieving impact with advanced analytics: Breaking down the adoption barrier
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Aaron Horowitz</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Reinforcement learning in Minecraft with CNTK-R
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Ali Zaidi</div>
+</div>
+</div>
+</div>
+</div>
+<div class="session-container mobile">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Session 1
+<small>11:00a-12:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">packages</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+Five packages in five weeks - from boredom to contribution via blogging
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Giora Simchoni</div>
+</div>
+<div class="talk">
+<div class="talk-title">You can make a package in 20 minutes</div>
+<div class="presenter">Jim Hester / Gabor Csardi</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+What makes a great R package?
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Joseph Rickert</div>
+</div>
+<div class="talk">
+<div class="talk-title">Contributing to tidyverse packages</div>
+<div class="presenter">Mara Averick</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<h4 class="track">case-study-3</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+Teach the Tidyverse to beginners
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">David Robinson</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+A SAS-to-R success story
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Elizabeth J. Atkinson</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+How I Learned to Stop Worrying and Love the Firewall
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Ian Lyttle</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Achieving impact with advanced analytics: Breaking down the adoption barrier
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Aaron Horowitz</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<h4 class="track">interop</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">Plumber: turning your R code into an API</div>
+<div class="presenter">Jeff Allen</div>
+</div>
+<div class="talk">
+<div class="talk-title">CloudML</div>
+<div class="presenter tbd">TBD</div>
+</div>
+<div class="talk">
+<div class="talk-title">Building Spark ML pipelines with sparklyr</div>
+<div class="presenter">Kevin Kuo</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Reinforcement learning in Minecraft with CNTK-R
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Ali Zaidi</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="session-container desktop">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Session 2
+<br/>
+<small>2:00p-3:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">teaching</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">case-study-4</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">production-2</h4>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Data-driven curriculum development
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Nick Carchedi</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Differentiating by data science
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Eric Colson</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Sharing analysis results with RStudio Connect
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Jeff Allen</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Kaggle in the classroom: using R and GitHub to run predictive modeling competitions
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Colin Rundel</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Imagine Boston 2030: Using R-Shiny to keep ourselves accountable and empower the public
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Kayla Patel</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Parameterized R Markdown reports with RStudio Connect
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Aron Atkins</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Something old, something new, something borrowed, something blue: Ways to teach data science (and learn it too!)
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Chester Ismay</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Agile data science
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Elaine McVey</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">Scaling Shiny</div>
+<div class="presenter">Sean Lopp</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Training an army of new data scientists
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Marco Blume</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Storytelling with R
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Olga Pierce</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">The analytics admin</div>
+<div class="presenter">Nathan Stephens</div>
+</div>
+</div>
+</div>
+</div>
+<div class="session-container mobile">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Session 2
+<small>2:00p-3:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<h4 class="track">teaching</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+Data-driven curriculum development
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Nick Carchedi</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Kaggle in the classroom: using R and GitHub to run predictive modeling competitions
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Colin Rundel</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Something old, something new, something borrowed, something blue: Ways to teach data science (and learn it too!)
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Chester Ismay</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Training an army of new data scientists
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Marco Blume</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<h4 class="track">case-study-4</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+Differentiating by data science
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Eric Colson</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Imagine Boston 2030: Using R-Shiny to keep ourselves accountable and empower the public
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Kayla Patel</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Agile data science
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Elaine McVey</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Storytelling with R
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Olga Pierce</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<h4 class="track">production-2</h4>
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+Sharing analysis results with RStudio Connect
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Jeff Allen</div>
+</div>
+<div class="talk">
+<div class="talk-title">
+Parameterized R Markdown reports with RStudio Connect
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Aron Atkins</div>
+</div>
+<div class="talk">
+<div class="talk-title">Scaling Shiny</div>
+<div class="presenter">Sean Lopp</div>
+</div>
+<div class="talk">
+<div class="talk-title">The analytics admin</div>
+<div class="presenter">Nathan Stephens</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="session-container desktop">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Fireside chat
+<br/>
+<small>4:00p-5:30p</small>
+</h4>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+<div class="talk">
+<div class="talk-title">
+Fireside chat: All things R and RStudio
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Amanda Gadrow, Tareef Kawaf, Jonathan McPherson, Jenny Bryan</div>
+</div>
+</div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</div>
+</div>
+<div class="session-container mobile">
+<div class="row">
+<div class="col-sm-3">
+<h4 class="session">
+Fireside chat
+<small>4:00p-5:30p</small>
+</h4>
+</div>
+<div class="col-sm-3">
+<div class="talks">
+<div class="talk">
+<div class="talk-title">
+Fireside chat: All things R and RStudio
+<i class="glyphicon glyphicon-leaf newbie"></i>
+</div>
+<div class="presenter">Amanda Gadrow, Tareef Kawaf, Jonathan McPherson, Jenny Bryan</div>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="talks"></div>
+</div>
+<div class="col-sm-3">
+<div class="talks"></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
